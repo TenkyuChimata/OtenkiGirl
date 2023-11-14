@@ -1,0 +1,8 @@
+name: OtenkiGirl
+version: ${project.version}
+main: jp.wolfx.otenkigirl.OtenkiGirl
+api-version: 1.13
+folia-supported: true
+
+commands:
+  otenki:
