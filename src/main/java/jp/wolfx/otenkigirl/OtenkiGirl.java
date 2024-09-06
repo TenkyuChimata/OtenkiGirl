@@ -24,7 +24,7 @@ public final class OtenkiGirl extends JavaPlugin {
 
     private static boolean isFolia() {
         try {
-            Class.forName("io.papermc.paper.threadedregions.RegionizedServer");
+            Class.forName("io.papermc.paper.threadedregions.scheduler.AsyncScheduler");
             return true;
         } catch (ClassNotFoundException e) {
             return false;
@@ -81,8 +81,6 @@ public final class OtenkiGirl extends JavaPlugin {
                 scheduleSyncDelayedTask(this, () -> {
                     if (player.isValid()) {
                         player.setHealth(player.getHealth() * 0.5);
-                        player.addPotionEffect(PotionEffectType.SLOW.createEffect(2400, 0));
-                        player.addPotionEffect(PotionEffectType.LEVITATION.createEffect(100, 0));
                     }
                 }, 100L);
             }
